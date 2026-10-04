@@ -1,0 +1,86 @@
+/* AETHER design-system tokens (vendored from the DS project) */
+@import './tokens/colors.css';
+@import './tokens/typography.css';
+@import './tokens/spacing.css';
+@import './tokens/effects.css';
+
+/* Self-hosted fonts — only the weights the page actually uses. */
+@import '@fontsource/schibsted-grotesk/400.css';
+@import '@fontsource/schibsted-grotesk/600.css';
+@import '@fontsource/ibm-plex-mono/400.css';
+@import '@fontsource/spectral/300-italic.css';
+@import '@fontsource/marcellus/400.css';
+
+/* Landing-local overrides. The handoff tunes two values differently
+   from the DS canonical — kept here so the DS token files stay pure. */
+:root {
+  /* Brighter page ground than DS --bg-app (#F4F8FB). */
+  --page-bg: #FCFDFF;
+  /* Field glow at 80% height (DS --field-glow is 100%). */
+  --field-glow: radial-gradient(
+    120% 80% at 50% 0%,
+    rgba(30, 122, 208, 0.09) 0%,
+    rgba(27, 166, 176, 0.05) 40%,
+    rgba(252, 253, 255, 0) 70%
+  );
+  /* Logo's dark Æ base layer. Flips to light on the void. */
+  --mark-ink: #0B1020;
+}
+
+[data-theme="dark"] {
+  --page-bg: var(--bg-app);
+  --field-glow: radial-gradient(
+    120% 80% at 50% 0%,
+    rgba(102, 178, 244, 0.12) 0%,
+    rgba(72, 202, 214, 0.07) 40%,
+    rgba(11, 17, 25, 0) 70%
+  );
+  --mark-ink: var(--light-50);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: var(--page-bg);
+}
+
+body {
+  background: var(--page-bg);
+  color: var(--text-strong);
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  line-height: var(--leading-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(30, 122, 208, 0.20);
+}
+
+a {
+  color: var(--signal);
+  text-decoration: none;
+  transition: color var(--dur-base) var(--ease-out);
+}
+
+a:hover {
+  color: var(--signal-bright);
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: var(--radius-md);
+}

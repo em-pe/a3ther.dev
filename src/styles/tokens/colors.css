@@ -1,0 +1,159 @@
+/* ============================================================
+   AETHER — COLOR · "Cirrus Bright"
+   Light by default; dark is an opt-in mode (set data-theme="dark"
+   on <html> or any container). Vendored from the AETHER design
+   system (aether-design-system-b1b73e3d). Reference the SEMANTIC
+   aliases in product code, not raw ramps.
+   ============================================================ */
+
+:root {
+  /* --- NEUTRALS · VOID (soft cool charcoals — the dark side, never black) --- */
+  --void-1000: #0B1119;
+  --void-900:  #0F1620;
+  --void-800:  #131C28;
+  --void-700:  #172230;
+  --void-600:  #19222C;
+  --void-500:  #1F2C3A;
+  --void-400:  #26364A;
+
+  /* --- NEUTRALS · PAPER (pale cool sky-whites — the daylight side) --- */
+  --paper-0:   #FFFFFF;
+  --paper-50:  #F8FBFD;
+  --paper-100: #F4F8FB;
+  --paper-200: #EAF1F7;
+  --paper-300: #DBE6EF;
+  --paper-400: #C6D6E3;
+
+  /* --- NEUTRALS · INK (cool dark text on light) --- */
+  --ink-900: #17222C;
+  --ink-700: #26303A;
+  --ink-500: #566472;
+  --ink-400: #7C8894;
+  --ink-300: #9AA6B2;
+
+  /* --- NEUTRALS · LIGHT (cool whites — text on the void, dark mode) --- */
+  --light-50:  #EEF4F9;
+  --light-100: #E7EFF5;
+  --light-200: #C4D2DE;
+  --light-300: #A6B4C2;
+  --light-400: #8A97A6;
+  --light-500: #5E6C7A;
+
+  /* --- BLUE · the Cirrus signal (vivid azure) --- */
+  --blue-700: #145FB0;
+  --blue-600: #1E7AD0;
+  --blue-500: #3E97E6;
+  --blue-400: #66B2F4;
+  --blue-300: #9CCBF8;
+
+  /* --- TEAL / GREEN · the cool secondary accent --- */
+  --teal-600: #0E7A82;
+  --teal-500: #1BA6B0;
+  --teal-400: #48CAD6;
+  --teal-300: #7FDCE4;
+  --green-600: #0C7048;
+  --green-500: #12915E;
+  --green-400: #45D69A;
+
+  /* --- PRISM: blues & greens only. Order: green -> teal -> cyan -> blue -> cobalt. --- */
+  --prism-green:   #14A57A;
+  --prism-aqua:    #1BA6B0;
+  --prism-cyan:    #2AA6D8;
+  --prism-blue:    #1E7AD0;
+  --prism-violet:  #1E6AD0;
+
+  /* --- STATUS hue bases --- */
+  --status-positive: #12915E;
+  --status-caution:  #C0821A;
+  --status-critical: #D33C55;
+  --status-info:     #1E7AD0;
+
+  /* ============================================================
+     SEMANTIC ALIASES — LIGHT (default)
+     ============================================================ */
+  --bg-base:        var(--paper-200);
+  --bg-app:         var(--paper-100);
+  --surface:        var(--paper-0);
+  --surface-card:   var(--paper-0);
+  --surface-raised: var(--paper-50);
+  --surface-input:  var(--paper-0);
+
+  --border:         rgba(40, 80, 120, 0.14);
+  --border-strong:  rgba(40, 80, 120, 0.24);
+  --border-faint:   rgba(40, 80, 120, 0.08);
+
+  --text-strong:    var(--ink-900);
+  --text-body:      var(--ink-700);
+  --text-muted:     var(--ink-500);
+  --text-faint:     var(--ink-400);
+  --text-on-signal: #FFFFFF;
+
+  --signal:         var(--blue-600);
+  --signal-bright:  var(--blue-700);
+  --signal-dim:     #6C96C4;
+  --signal-deep:    #E1EFFA;
+
+  --accent:         var(--signal);
+  --accent-hover:   var(--signal-bright);
+  --accent-2:       var(--teal-600);
+
+  --focus-ring:     rgba(30, 122, 208, 0.40);
+
+  /* --- Gradients --- */
+  --refraction: linear-gradient(
+    90deg,
+    var(--prism-green) 0%,
+    var(--prism-aqua) 26%,
+    var(--prism-cyan) 50%,
+    var(--prism-blue) 76%,
+    var(--prism-violet) 100%
+  );
+
+  --field-glow: radial-gradient(
+    120% 100% at 50% 0%,
+    rgba(30, 122, 208, 0.09) 0%,
+    rgba(27, 166, 176, 0.05) 40%,
+    rgba(244, 248, 251, 0) 70%
+  );
+}
+
+[data-theme="dark"] {
+  --bg-base:        var(--void-1000);
+  --bg-app:         var(--void-900);
+  --surface:        var(--void-700);
+  --surface-card:   var(--void-600);
+  --surface-raised: var(--void-500);
+  --surface-input:  var(--void-500);
+
+  --border:         rgba(150, 180, 210, 0.12);
+  --border-strong:  rgba(150, 180, 210, 0.20);
+  --border-faint:   rgba(150, 180, 210, 0.06);
+
+  --text-strong:    var(--light-50);
+  --text-body:      var(--light-100);
+  --text-muted:     var(--light-300);
+  --text-faint:     var(--light-400);
+  --text-on-signal: #08131F;
+
+  --signal:         var(--blue-400);
+  --signal-bright:  #93C6F8;
+  --signal-dim:     #3E6FA8;
+  --signal-deep:    #12283C;
+
+  --accent-2:       var(--teal-400);
+
+  --focus-ring:     rgba(102, 178, 244, 0.50);
+
+  --prism-green:   #45D69A;
+  --prism-aqua:    #48CAD6;
+  --prism-cyan:    #5BC0EE;
+  --prism-blue:    #66B2F4;
+  --prism-violet:  #5C96F2;
+
+  --field-glow: radial-gradient(
+    120% 100% at 50% 0%,
+    rgba(102, 178, 244, 0.12) 0%,
+    rgba(72, 202, 214, 0.07) 40%,
+    rgba(11, 17, 25, 0) 70%
+  );
+}

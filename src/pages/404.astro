@@ -1,0 +1,98 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = '404 — a3ther.dev';
+const description = 'Page not found.';
+---
+
+<Base title={title} description={description} path="/404">
+  <main>
+    <article>
+      <p class="eyebrow">404</p>
+      <h1>Not here.</h1>
+      <p class="lead">The medium is quiet at this address.</p>
+      <p class="body">
+        <a href="/">Return to the surface.</a>
+      </p>
+    </article>
+    <div class="hairline" aria-hidden="true"></div>
+  </main>
+</Base>
+
+<style>
+  main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-7) var(--gutter) var(--space-8);
+    background-image: var(--field-glow);
+    background-repeat: no-repeat;
+  }
+
+  article {
+    width: 100%;
+    max-width: 620px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  h1 {
+    margin: var(--space-4) 0 0;
+    font-family: var(--font-display);
+    font-weight: var(--weight-semibold);
+    font-size: clamp(36px, 6vw, 56px);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    color: var(--text-strong);
+  }
+
+  .eyebrow {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--signal);
+  }
+
+  .lead {
+    margin: var(--space-6) 0 0;
+    font-family: var(--font-oracular);
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(20px, 3vw, 24px);
+    line-height: 1.45;
+    color: var(--text-strong);
+    text-wrap: pretty;
+  }
+
+  .body {
+    margin: 28px 0 0;
+    font-family: var(--font-body);
+    font-size: var(--text-md);
+    line-height: 1.65;
+    color: var(--text-muted);
+    text-wrap: pretty;
+  }
+
+  .hairline {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background: linear-gradient(
+      90deg,
+      rgba(20, 165, 122, 0) 0%,
+      var(--prism-green) 18%,
+      var(--prism-aqua) 38%,
+      var(--prism-cyan) 55%,
+      var(--prism-blue) 78%,
+      rgba(30, 106, 208, 0) 100%
+    );
+    pointer-events: none;
+  }
+</style>

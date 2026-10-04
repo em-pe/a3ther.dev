@@ -1,0 +1,47 @@
+/* ============================================================
+   AETHER — EFFECTS: radii, shadows, glow, motion (vendored).
+   ============================================================ */
+:root {
+  --radius-xs:   4px;
+  --radius-sm:   6px;
+  --radius-md:   10px;
+  --radius-lg:   14px;
+  --radius-xl:   20px;
+  --radius-2xl:  28px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(20, 40, 90, 0.08);
+  --shadow-md: 0 10px 28px -12px rgba(20, 40, 90, 0.18);
+  --shadow-lg: 0 24px 60px -22px rgba(20, 40, 90, 0.22);
+  --shadow-xl: 0 40px 110px -34px rgba(20, 40, 90, 0.26);
+
+  --glow-signal:    0 0 0 1px rgba(30, 122, 208, 0.22), 0 8px 26px -8px rgba(30, 122, 208, 0.35);
+  --glow-signal-sm: 0 6px 18px -8px rgba(30, 122, 208, 0.32);
+  --glow-soft:      0 0 80px -26px rgba(30, 122, 208, 0.16);
+  --edge-light:     inset 0 1px 0 rgba(255, 255, 255, 0.7);
+
+  --blur-sm: blur(8px);
+  --blur-md: blur(18px);
+  --blur-lg: blur(40px);
+
+  --ease-out:   cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-inout: cubic-bezier(0.65, 0.05, 0.36, 1);
+  --ease-drift: cubic-bezier(0.4, 0.0, 0.2, 1);
+
+  --dur-fast:  120ms;
+  --dur-base:  220ms;
+  --dur-slow:  420ms;
+  --dur-drift: 1200ms;
+}
+
+[data-theme="dark"] {
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px -8px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 24px 60px -16px rgba(0, 0, 0, 0.65);
+  --shadow-xl: 0 40px 110px -28px rgba(0, 0, 0, 0.72);
+
+  --glow-signal:    0 0 0 1px rgba(102, 178, 244, 0.30), 0 0 28px -4px rgba(102, 178, 244, 0.45);
+  --glow-signal-sm: 0 0 18px -6px rgba(102, 178, 244, 0.55);
+  --glow-soft:      0 0 80px -20px rgba(102, 178, 244, 0.20);
+  --edge-light:     inset 0 1px 0 rgba(220, 232, 255, 0.06);
+}

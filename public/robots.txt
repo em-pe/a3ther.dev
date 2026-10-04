@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://a3ther.dev/sitemap-index.xml
